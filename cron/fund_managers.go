@@ -14,10 +14,11 @@ import (
 
 // SyncFundManagers 同步基金经理
 func SyncFundManagers() {
+	ctx := context.Background()
 	if !goutils.IsTradingDay() {
+		logging.Info(ctx, "Today is not trading day, exit...")
 		return
 	}
-	ctx := context.Background()
 	managers, err := datacenter.EastMoney.FundMangers(ctx, "all", "penavgrowth", "desc")
 	if err != nil {
 		logging.Error(ctx, "SyncFundManagers error:"+err.Error())

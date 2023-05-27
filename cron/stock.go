@@ -14,10 +14,11 @@ import (
 
 // SyncIndustryList 同步行业列表
 func SyncIndustryList() {
+	ctx := context.Background()
 	if !goutils.IsTradingDay() {
+		logging.Info(ctx, "Today is not trading day, exit...")
 		return
 	}
-	ctx := context.Background()
 	indlist, err := datacenter.EastMoney.QueryIndustryList(ctx)
 	if err != nil {
 		logging.Errorf(ctx, "SyncIndustryList QueryIndustryList error:", err)

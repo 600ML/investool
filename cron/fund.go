@@ -17,10 +17,11 @@ import (
 
 // SyncFund 同步基金数据
 func SyncFund() {
+	ctx := context.Background()
 	if !goutils.IsTradingDay() {
+		logging.Info(ctx, "Today is not trading day, exit...")
 		return
 	}
-	ctx := context.Background()
 	logging.Info(ctx, "SyncFund request start...")
 
 	// 获取全量列表
