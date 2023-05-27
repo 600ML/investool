@@ -21,27 +21,31 @@ type MaterialItem struct {
 }
 
 // MaterialSeries 某一个系列的资料
-// {
-//     "飙股在线等": [
-//         MaterialItem, ...
-//     ]
-// }
+//
+//	{
+//	    "飙股在线等": [
+//	        MaterialItem, ...
+//	    ]
+//	}
 type MaterialSeries map[string][]MaterialItem
 
 // TypedMaterialSeries 对MaterialSeries进行分类，如：视频、电子书等
-// {
-//     "videos": [
-//         MaterialSeries, ...
-//     ],
-//     "ebooks": [
-//         MaterialSeries, ...
-//     ]
-// }
+//
+//	{
+//	    "videos": [
+//	        MaterialSeries, ...
+//	    ],
+//	    "ebooks": [
+//	        MaterialSeries, ...
+//	    ]
+//	}
 type TypedMaterialSeries map[string][]MaterialSeries
 
 // AllMaterialsList 包含全部资料信息的大JSON列表
 // [
-//     TypedMaterialSeries, ...
+//
+//	TypedMaterialSeries, ...
+//
 // ]
 type AllMaterialsList []TypedMaterialSeries
 
@@ -53,7 +57,7 @@ func Materials(c *gin.Context) {
 	data := gin.H{
 		"Env":       viper.GetString("env"),
 		"Version":   version.Version,
-		"PageTitle": "InvesTool | 资料",
+		"PageTitle": "投资助手 | 资料",
 	}
 	f, err := statics.Files.ReadFile(MaterialsFilename)
 	if err != nil {

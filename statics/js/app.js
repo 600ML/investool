@@ -51,7 +51,7 @@ $(document).ready(function () {
     $("#load_modal").modal()[0].M_Modal.options.dismissible = false;
     $("#load_modal").modal("open");
     $.ajax({
-      url: "/selector",
+      url: "/invest/selector",
       type: "post",
       data: $("#selector_form").serialize(),
       success: function (data) {
@@ -292,7 +292,7 @@ $(document).ready(function () {
     $("#load_modal").modal()[0].M_Modal.options.dismissible = false;
     $("#load_modal").modal("open");
     $.ajax({
-      url: "/checker",
+      url: "/invest/checker",
       type: "post",
       data: $("#checker_form").serialize(),
       success: function (data) {
@@ -528,7 +528,7 @@ $(document).ready(function () {
     $("#load_modal").modal()[0].M_Modal.options.dismissible = false;
     $("#load_modal").modal("open");
     $.ajax({
-      url: "/fund/check",
+      url: "/invest/fund/check",
       type: "post",
       data: $("#fundcheck_form").serialize(),
       success: function (data) {

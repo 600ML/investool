@@ -23,14 +23,14 @@
         <header>
             <nav>
                 <div class="nav-wrapper">
-                    <a href="/" class="brand-logo"><i class="material-icons">local_atm</i>投资助手</a>
+                    <a href="/invest" class="brand-logo"><i class="material-icons">local_atm</i>投资助手</a>
                     <a href="#" data-target="mobile-sidenav" class="sidenav-trigger"><i class="material-icons">菜单</i></a>
                     <ul class="right hide-on-med-and-down">
-                        <li id="nav-stock"><a href="/"><i class="material-icons left">trending_up</i><strong>股票</strong></a></li>
-                        <li id="nav-fund" style="display:none;"><a href="/fund"><i class="material-icons left">timeline</i><strong>基金</strong></a></li>
-                        <li id="nav-about" style="display:none;"><a href="/about"><i class="material-icons left">info_outline</i><strong>关于</strong></a></li>
-                        <li id="nav-comment" style="display:none;"><a href="/comment"><i class="material-icons left">chat_bubble_outline</i><strong>留言</strong></a></li>
-                        <li id="nav-materials" style="display:none;"><a href="/materials"><i class="material-icons left">book</i><strong>资料</strong></a></li>
+                        <li id="nav-stock"><a href="/invest"><i class="material-icons left">trending_up</i><strong>股票</strong></a></li>
+                        <li id="nav-fund" style="display:none;"><a href="/invest/fund"><i class="material-icons left">timeline</i><strong>基金</strong></a></li>
+                        <li id="nav-about" style="display:none;"><a href="/invest/about"><i class="material-icons left">info_outline</i><strong>关于</strong></a></li>
+                        <li id="nav-comment" style="display:none;"><a href="/invest/comment"><i class="material-icons left">chat_bubble_outline</i><strong>留言</strong></a></li>
+                        <li id="nav-materials" style="display:none;"><a href="/invest/materials"><i class="material-icons left">book</i><strong>资料</strong></a></li>
                     </ul>
                 </div>
             </nav>
@@ -45,15 +45,15 @@
                         <a href="#!"><span class="white-text">投资助手 v{{ .Version }}</span></a>
                     </div>
                 </li>
-                <li><a class="collapsible-header waves-effect waves-red" href="/"><i class="material-icons left">trending_up</i>股票</a></li>
+                <li><a class="collapsible-header waves-effect waves-red" href="/invest"><i class="material-icons left">trending_up</i>股票</a></li>
                 <li><div class="divider"></div></li>
-                <li><a class="collapsible-header waves-effect waves-red" href="/fund" style="display:none;"><i class="material-icons left">timeline</i>基金</a></li>
+                <li><a class="collapsible-header waves-effect waves-red" href="/invest/fund" style="display:none;"><i class="material-icons left">timeline</i>基金</a></li>
                 <li><div class="divider"></div></li>
-                <li><a class="collapsible-header waves-effect waves-red" href="/about" style="display:none;"><i class="material-icons left">info_outline</i>关于</a></li>
+                <li><a class="collapsible-header waves-effect waves-red" href="/invest/about" style="display:none;"><i class="material-icons left">info_outline</i>关于</a></li>
                 <li><div class="divider"></div></li>
-                <li><a class="collapsible-header waves-effect waves-red" href="/comment" style="display:none;"><i class="material-icons left">chat_bubble_outline</i>留言</a></li>
+                <li><a class="collapsible-header waves-effect waves-red" href="/invest/comment" style="display:none;"><i class="material-icons left">chat_bubble_outline</i>留言</a></li>
                 <li><div class="divider"></div></li>
-                <li><a class="collapsible-header waves-effect waves-red" href="/materials" style="display:none;"><i class="material-icons left">book</i>资料</a></li>
+                <li><a class="collapsible-header waves-effect waves-red" href="/invest/materials" style="display:none;"><i class="material-icons left">book</i>资料</a></li>
             </ul>
 
             <div id="fixed-action-btn" class="fixed-action-btn" style="bottom: 74px; right: 24px;">
@@ -76,10 +76,10 @@
             </div>
             {{ end }}
 
-            <div class="row">
+            <div class="row" style="min-width:250px;">
                 <!-- 2 -->
                 <ins class="adsbygoogle"
-                     style="display:block"
+                     style="display:block;"
                      data-ad-client="ca-pub-3437725005703827"
                      data-ad-slot="9254516130"
                      data-ad-format="auto"
@@ -94,10 +94,10 @@
         </main>
 
         <div class="container">
-            <div class="row">
+            <div class="row" style="min-width:250px;">
                 <!-- 1 -->
                 <ins class="adsbygoogle"
-                     style="display:block"
+                     style="display:block;"
                      data-ad-client="ca-pub-3437725005703827"
                      data-ad-slot="4193761142"
                      data-ad-format="auto"
