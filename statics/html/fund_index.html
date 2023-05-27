@@ -48,7 +48,7 @@
     <div id="fundfilter" class="col s12">
         <h2><span onclick="$('#desc_4433').tapTarget('open')">4433<i class="tiny material-icons">help_outline</i></span>基金严选</h2>
         <div class="row">
-            <form class="col s12" id="fundfilter_form" action="/fund/filter" method="GET">
+            <form class="col s12" id="fundfilter_form" action="/invest/fund/filter" method="GET">
                 <div class="row">
                     <div class="input-field col s12 m12 l6">
                         <input id="year_1_rank_ratio" name="year_1_rank_ratio" value="25.00" type="number" step="any" class="validate">
@@ -134,7 +134,7 @@
     <div id="fundmgr" class="col s12">
         <h2>基金经理筛选</h2>
         <div class="row">
-            <form class="col s12" id="fundmgr_form" action="/fund/managers" method="GET">
+            <form class="col s12" id="fundmgr_form" action="/invest/fund/managers" method="GET">
                 <div class="row">
                     <div class="input-field col s12 m12 l6">
                         <input id="min_yieldse" name="min_yieldse" type="number" class="validate" value="15" step="any">
@@ -276,7 +276,7 @@
     <div id="fundsim" class="col s12">
         <h2>基金持仓相似度检测</h2>
         <div class="row">
-            <form class="col s12" id="fundsim_form" action="/fund/similarity" method="GET">
+            <form class="col s12" id="fundsim_form" action="/invest/fund/similarity" method="GET">
                 <div class="row">
                     <div class="input-field col s12">
                         <textarea id="codes" name="codes" class="materialize-textarea validate" required></textarea>
@@ -306,7 +306,7 @@
     <div id="querybystock" class="col s12">
         <h2>股票选基</h2>
         <div class="row">
-            <form class="col s12" id="fundsim_form" action="/fund/query_by_stock" method="POST">
+            <form class="col s12" id="fundsim_form" action="/invest/fund/query_by_stock" method="POST">
                 <div class="row">
                     <div class="input-field col s12">
                         <textarea id="keywords" name="keywords" class="materialize-textarea validate" required></textarea>
