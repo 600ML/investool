@@ -302,6 +302,16 @@ func FundSimilarity(c *gin.Context) {
 		return
 	}
 	codeList := goutils.SplitStringFields(p.Codes)
+	if len(codeList) < 2 {
+		data := gin.H{
+			"Env":       viper.GetString("env"),
+			"Version":   version.Version,
+			"PageTitle": "投资助手 | 基金 | 持仓相似度",
+			"Error":     "请填写至少2个基金代码",
+		}
+		c.HTML(http.StatusOK, "fund_similarity.html", data)
+		return
+	}
 	checker := core.NewChecker(c, core.DefaultCheckerOptions)
 	result, err := checker.GetFundStocksSimilarity(c, codeList)
 	if err != nil {
